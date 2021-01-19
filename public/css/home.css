@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    background-color: #36393f;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 71px 240px auto 240px;
+    grid-template-rows: 46px auto 52px;
+    grid-template-areas:
+        'channels server-name channel-info channel-info'
+        'channels menu content users'
+        'channels user-options input users';
+    height: 100vh;
+
+}
+
+.channels {
+    grid-area: channels;
+    background-color: #202225;
+
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divLogo {
+    background-color: #2F3136;
+    height: 50px;
+    width: 50px;
+
+    margin-bottom: 10px;
+
+    border-radius: 360px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.divSeparator {
+    height: 2px;
+    width: 32px;
+
+    border-radius: 1px;
+    background-color: #2D2F31;
+}
+
+.channel-image {
+    height: 50px;
+    width: 50px;
+
+    border-radius: 360px;
+
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.channel-options {
+    margin-top: 10px;
+}
+
+.server-name {
+    grid-area: server-name;
+
+    border-bottom: 2px solid #2A2D33;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 11px 0 16px;
+    background-color: #2F3136;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px 0px;
+    z-index: 2;
+}
+
+.title {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: 'Uni Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+
+    background-color: #2F3136;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #2F3136;
+
+    display: flex;
+    flex-direction: column;
+    padding: 24px 9.5px 0 10px;
+}
+
+.button-menu {
+    background-color: transparent;
+    height: 30px;
+
+    color: #A5A7AA;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 2px;
+    line-height: 15px;
+    padding: 1px 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.button-menu-icons {
+    margin-right: 5px;
+}
+
+.button-text {
+    text-align: start;
+    font-family: 'Uni Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-bottom: 0;
+}
+
+.button-menu:hover {
+    background-color: #393C42;
+    color: white;
+}
+
+.details-menu {
+    margin-top: 30px;
+
+    color: #A5A7AA;
+
+    text-align: start;
+    font-family: 'Uni Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.details-menu:hover {
+    color: white;
+}
+
+.user-options {
+    grid-area: user-options;
+    background-color: #292b2f;
+
+
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px 0px;
+}
+
+.user-info-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-info-name {
+    margin-left: 3px;
+    display: flex;
+    flex-direction: column;
+
+    text-align: start;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.user-info-code {
+    color: #72767D;
+    text-decoration: none;
+    font-size: 11px;
+    background-color: transparent
+}
+
+.channel-info {
+    grid-area: channel-info;
+    background-color: #36393F;
+
+    border-bottom: 2px solid #2A2D33;
+}
+
+.content {
+    grid-area: content;
+    background-color: #36393F;
+
+    padding: 4px 16px;
+    margin-right: 4px;
+
+    align-items: center;
+
+    overflow: hidden scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.user-information-message {
+    flex-direction: row;
+}
+
+.message-user-name {
+    position: relative;
+    margin-left: 10px;
+    bottom: 8px;
+
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+.message-user-timestamp {
+    position: relative;
+    margin-left: 5px;
+    bottom: 8px;
+
+    font-size: 11px;
+    color: #a5a7aacb;
+}
+
+.message {
+    position: relative;
+    left: 53px;
+    bottom: 20px;
+
+    margin-right: 100px;
+    color: #dcddd3e7;
+}
+
+.users {
+    grid-area: users;
+    background-color: #2F3136;
+
+    display: flex;
+
+    flex-direction: column;
+    padding: 3px 6px 0 16px;
+    max-height: calc(100vh - 46px);
+
+    overflow-y: scroll;
+}
+
+.office {
+    margin-top: 20px;
+}
+
+.professor-office {
+    margin-top: 20px;
+
+    font-family: 'Uni Sans', sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: #a5a7aacb;
+}
+
+.user-list-layout {
+    margin-top: 5px;
+    padding: 5px;
+
+    display: flex;
+
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.user-photo {
+    border-radius: 360px;
+}
+
+.user-nick {
+    font-family: 'Uni Sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden
+}
+
+.professor-tutor {
+    color: rgb(46, 204, 113);
+}
+
+.ia18 {
+    color: rgb(52, 152, 219);
+}
+
+.mao-do-rei {
+    color: rgb(230, 126, 34);
+}
+
+.message-input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+
+    padding-left: 50px;
+
+    color:  white;
+    background-color:  #36393F;
+}
+
+.send-arquive {
+    position: relative;
+    top: 30px;
+}
